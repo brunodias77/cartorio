@@ -1,5 +1,6 @@
 import { XCircle } from 'lucide-react';
 import { ProtocolForm, type ProtocolFormData } from './ProtocolForm';
+import { CreateProtocolForm } from './CreateProtocolForm';
 
 // Helper component for Modal Wrapper
 const ModalWrapper = ({ children, title, onClose }: { children: React.ReactNode, title: string, onClose: () => void }) => (
@@ -25,10 +26,9 @@ export const CreateProtocolModal = ({ isOpen, onClose, onSubmit }: CreateProtoco
 
     return (
         <ModalWrapper title="Novo Documento" onClose={onClose}>
-            <ProtocolForm
+            <CreateProtocolForm
                 onSubmit={onSubmit}
                 onCancel={onClose}
-                showProtocolField={false}
                 submitLabel="Criar"
             />
         </ModalWrapper>
