@@ -5,7 +5,7 @@ import { Header } from './components/layout/Header'
 import { Sidebar } from './components/layout/Sidebar'
 import { ProtocolTable } from './components/protocols/ProtocolTable'
 import { StatsGrid } from './components/protocols/StatsGrid'
-import { ProtocolModal } from './components/protocols/ProtocolModal';
+import { CreateProtocolModal, EditProtocolModal } from './components/protocols/ProtocolModal';
 
 interface ProtocolItem {
   id: string | number;
@@ -31,18 +31,21 @@ const INITIAL_DATA: ProtocolItem[] = [
 
 function App() {
   const [items, setItems] = useState<ProtocolItem[]>(INITIAL_DATA);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<any>(null);
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleCreateInit = () => {
-    setEditingItem(null);
-    setIsModalOpen(true);
+    setIsCreateModalOpen(true);
   };
 
   const handleEditInit = (item: any) => {
     setEditingItem(item);
-    setIsModalOpen(true);
+  };
+
+  const handleCloseModals = () => {
+    setIsCreateModalOpen(false);
+    setEditingItem(null);
   };
 
   const handleDelete = (id: string | number) => {
@@ -64,7 +67,7 @@ function App() {
       };
       setItems(prev => [newItem, ...prev]);
     }
-    setIsModalOpen(false);
+    handleCloseModals();
   };
 
   const filteredTodos = items.filter(item =>
@@ -117,9 +120,15 @@ function App() {
         />
       </main>
 
-      <ProtocolModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+      <CreateProtocolModal
+        isOpen={isCreateModalOpen}
+        onClose={handleCloseModals}
+        onSubmit={handleFormSubmit}
+      />
+
+      <EditProtocolModal
+        isOpen={!!editingItem}
+        onClose={handleCloseModals}
         onSubmit={handleFormSubmit}
         initialData={editingItem}
       />
