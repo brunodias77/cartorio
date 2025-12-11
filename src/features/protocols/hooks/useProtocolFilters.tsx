@@ -1,7 +1,7 @@
 // features/protocols/hooks/useProtocolFilters.ts
 
 import { useState, useMemo, useCallback } from 'react';
-import type { Protocol } from '../types/protocol.types';
+import type { Protocol } from '../../../shared/types/protocol.types';
 
 export const useProtocolFilters = (protocols: Protocol[]) => {
     const [searchTerm, setSearchTerm] = useState('');

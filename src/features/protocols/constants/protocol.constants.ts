@@ -1,6 +1,6 @@
 // features/protocols/constants/protocol.constants.ts
 
-import { ProtocolStatus } from "../types/protocol.types";
+import { ProtocolStatus } from "../../../shared/types/protocol.types";
 
 export const STATUS_OPTIONS = [
   { value: ProtocolStatus.PENDING, label: "Pendente" },

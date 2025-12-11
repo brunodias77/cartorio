@@ -2,7 +2,7 @@
 
 import { Clock, CheckCircle2, XCircle } from 'lucide-react';
 import type { ReactNode } from 'react';
-import type { BadgeProps } from '../types/badge.types';
+import type { BadgeProps } from '../../types/badge.types';
 
 const BADGE_STYLES: Record<string, string> = {
     Pendente: 'bg-amber-50 text-amber-700 border-amber-200 hover:bg-amber-100',

@@ -1,8 +1,8 @@
 // features/protocols/hooks/useProtocols.ts
 
 import { useState, useCallback } from 'react';
-import type { Protocol, ProtocolFormData, CreateProtocolData, ProtocolStats } from '../types/protocol.types';
-import { ProtocolStatus } from '../types/protocol.types';
+import type { Protocol, ProtocolFormData, CreateProtocolData, ProtocolStats } from '../../../shared/types/protocol.types';
+import { ProtocolStatus } from '../../../shared/types/protocol.types';
 import { MESSAGES } from '../constants/protocol.constants';
 
 const INITIAL_PROTOCOLS: Protocol[] = [

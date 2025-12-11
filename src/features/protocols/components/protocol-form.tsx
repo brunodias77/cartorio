@@ -1,8 +1,8 @@
 // features/protocols/components/ProtocolForm.tsx
 
 import { type FormEvent } from 'react';
-import type { ProtocolFormData } from '../types/protocol.types';
-import { ProtocolStatus } from '../types/protocol.types';
+import type { ProtocolFormData } from '../../../shared/types/protocol.types';
+import { ProtocolStatus } from '../../../shared/types/protocol.types';
 import { STATUS_OPTIONS, FORM_LABELS } from '../constants/protocol.constants';
 
 interface ProtocolFormProps {

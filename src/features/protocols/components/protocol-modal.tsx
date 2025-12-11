@@ -2,7 +2,7 @@
 
 import { XCircle } from 'lucide-react';
 import { ProtocolForm } from './protocol-form';
-import type { ProtocolFormData } from '../types/protocol.types';
+import type { ProtocolFormData } from '../../../shared/types/protocol.types';
 
 interface ModalWrapperProps {
     children: React.ReactNode;

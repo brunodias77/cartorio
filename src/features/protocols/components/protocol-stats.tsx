@@ -2,7 +2,7 @@
 
 import { FileDigit, Clock, CheckCircle2 } from 'lucide-react';
 import { Card } from '../../../shared/components/ui/card';
-import type { ProtocolStats as Stats } from '../types/protocol.types';
+import type { ProtocolStats as Stats } from '../../../shared/types/protocol.types';
 
 interface ProtocolStatsProps {
     stats: Stats;

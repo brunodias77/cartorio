@@ -3,8 +3,8 @@
 import { Pencil, Trash2, Search } from 'lucide-react';
 import { Card } from '../../../shared/components/ui/card';
 import { Badge } from '../../../shared/components/ui/badge';
-import type { Protocol } from '../types/protocol.types';
-import { formatDate } from '../../../shared/components/utils/date.utils';
+import type { Protocol } from '../../../shared/types/protocol.types';
+import { formatDate } from '../../../shared/utils/date.utils';
 import { MESSAGES } from '../constants/protocol.constants';
 
 interface ProtocolListProps {

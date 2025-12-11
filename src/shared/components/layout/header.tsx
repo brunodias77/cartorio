@@ -1,7 +1,7 @@
 // shared/components/layout/Header/Header.tsx
 
 import { Building2, Clock } from 'lucide-react';
-import { formatLongDate } from '../utils/date.utils';
+import { formatLongDate } from '../../utils/date.utils';
 
 export const Header = () => {
     const currentDate = formatLongDate(new Date());

@@ -9,7 +9,7 @@ import { ProtocolSearch } from '../features/protocols/components/protocol-search
 import { CreateProtocolModal, EditProtocolModal } from '../features/protocols/components/protocol-modal';
 import { useProtocols } from '../features/protocols/hooks/useProtocols';
 import { useProtocolFilters } from '../features/protocols/hooks/useProtocolFilters';
-import type { Protocol, ProtocolFormData, CreateProtocolData } from '../features/protocols/types/protocol.types';
+import type { Protocol, ProtocolFormData, CreateProtocolData } from '../shared/types/protocol.types';
 
 function App() {
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
