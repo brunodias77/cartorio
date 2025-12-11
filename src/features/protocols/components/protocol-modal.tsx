@@ -47,7 +47,7 @@ export const CreateProtocolModal = ({
                 onSubmit={onSubmit}
                 onCancel={onClose}
                 submitLabel="Criar"
-                showProtocolNumber={false}
+                showInputsUpdate={false}
             />
         </ModalWrapper>
     );

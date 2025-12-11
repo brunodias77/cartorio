@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 // features/protocols/types/protocol.types.ts
 
 export const ProtocolStatus = {
