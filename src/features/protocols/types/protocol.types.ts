@@ -1,10 +1,13 @@
 // features/protocols/types/protocol.types.ts
 
-export enum ProtocolStatus {
-  PENDING = "Pendente",
-  YES = "Sim",
-  NO = "Não",
-}
+export const ProtocolStatus = {
+  PENDING: "Pendente",
+  YES: "Sim",
+  NO: "Não",
+} as const;
+
+export type ProtocolStatus =
+  (typeof ProtocolStatus)[keyof typeof ProtocolStatus];
 
 export interface Protocol {
   id: string | number;
