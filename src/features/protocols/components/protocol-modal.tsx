@@ -2,7 +2,7 @@
 
 import { XCircle } from 'lucide-react';
 import { ProtocolForm } from './protocol-form';
-import type { ProtocolFormData, CreateProtocolData } from '../types/protocol.types';
+import type { ProtocolFormData } from '../types/protocol.types';
 
 interface ModalWrapperProps {
     children: React.ReactNode;
@@ -31,7 +31,7 @@ const ModalWrapper = ({ children, title, onClose }: ModalWrapperProps) => (
 interface CreateProtocolModalProps {
     isOpen: boolean;
     onClose: () => void;
-    onSubmit: (data: CreateProtocolData) => void;
+    onSubmit: (data: ProtocolFormData) => void;
 }
 
 export const CreateProtocolModal = ({

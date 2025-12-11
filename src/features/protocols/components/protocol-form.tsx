@@ -1,13 +1,13 @@
 // features/protocols/components/ProtocolForm.tsx
 
 import { type FormEvent } from 'react';
-import type { ProtocolFormData, CreateProtocolData } from '../types/protocol.types';
+import type { ProtocolFormData } from '../types/protocol.types';
 import { ProtocolStatus } from '../types/protocol.types';
 import { STATUS_OPTIONS, FORM_LABELS } from '../constants/protocol.constants';
 
 interface ProtocolFormProps {
     initialData?: Partial<ProtocolFormData>;
-    onSubmit: (data: ProtocolFormData | CreateProtocolData) => void;
+    onSubmit: (data: ProtocolFormData) => void;
     onCancel: () => void;
     submitLabel?: string;
     showProtocolNumber?: boolean;

@@ -1,7 +1,7 @@
 // app/App.tsx
 
 import { useState } from 'react';
-import { Header } from '../shared/components/layout/Header';
+import { Header } from '../shared/components/layout/header';
 import { Sidebar } from '../shared/components/layout/sidebar';
 import { ProtocolList } from '../features/protocols/components/protocol-list';
 import { ProtocolStats } from '../features/protocols/components/protocol-stats';
@@ -9,7 +9,7 @@ import { ProtocolSearch } from '../features/protocols/components/protocol-search
 import { CreateProtocolModal, EditProtocolModal } from '../features/protocols/components/protocol-modal';
 import { useProtocols } from '../features/protocols/hooks/useProtocols';
 import { useProtocolFilters } from '../features/protocols/hooks/useProtocolFilters';
-import type { Protocol, ProtocolFormData } from '../features/protocols/types/protocol.types';
+import type { Protocol, ProtocolFormData, CreateProtocolData } from '../features/protocols/types/protocol.types';
 
 function App() {
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
@@ -38,9 +38,9 @@ function App() {
     setEditingProtocol(null);
   };
 
-  const handleCreateSubmit = (data: ProtocolFormData) => {
+  const handleCreateSubmit = (data: CreateProtocolData) => {
     createProtocol(data);
-    handleCloseModals();
+    setIsCreateModalOpen(false);
   };
 
   const handleEditSubmit = (data: ProtocolFormData) => {

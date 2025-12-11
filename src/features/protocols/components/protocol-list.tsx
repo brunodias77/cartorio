@@ -1,10 +1,10 @@
 // features/protocols/components/ProtocolList.tsx
 
 import { Pencil, Trash2, Search } from 'lucide-react';
-import { Card } from '../../../shared/components/ui/Card/Card';
-import { Badge } from '../../../shared/components/ui/Badge/Badge';
+import { Card } from '../../../shared/components/ui/card';
+import { Badge } from '../../../shared/components/ui/badge';
 import type { Protocol } from '../types/protocol.types';
-import { formatDate } from '../../../shared/utils/date.utils';
+import { formatDate } from '../../../shared/components/utils/date.utils';
 import { MESSAGES } from '../constants/protocol.constants';
 
 interface ProtocolListProps {
